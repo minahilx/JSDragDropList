@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  height: 100%;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background: #DFCCFB;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #C08261;
+  /*
+  DFA878
+  BEADFA  -> dark
+  DFCCFB  -> light
+  */
+}
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  gap: 20px;
+  background: white;
+  padding: 4rem;
+  border-radius: 10px;
+}
+
+.list__item {
+  width: 100%;
+  background: #C08261;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: 0 4px 6px -1px #001d2910, 0 2px 4px -2px #001d2910;
+  display: flex;
+  align-items: center;
+  position: relative;
+  will-change: transform;
+  cursor: grab; /* Added cursor style for the list item */
+}
+
+.list__item.is-idle {
+  transition: 0.25s ease transform;
+}
+
+.list__item.is-draggable {
+  z-index: 10;
+}
+
+.task-priorities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  gap: 10px;
+}
+
+.task-priority {
+  background: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-priority:hover {
+  background: #ddd;
+}
