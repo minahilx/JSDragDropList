@@ -1,4 +1,3 @@
-# Drag and Drop List using JS
 
 An intuitive drag-and-drop functionality for reordering items in a list.
 
